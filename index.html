@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eco Steel Ven | Inteligencia en Construcción</title>
+    <title>Eco Steel Ven | Ingeniería & AutoCAD 2026</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
     <style>
         :root {
@@ -18,27 +18,71 @@
             background-color: var(--dark);
             color: var(--text);
             margin: 0;
+            padding-top: 70px; /* Espacio para el menú fijo */
             overflow-x: hidden;
         }
 
-        /* Fondo Animado de Ingeniería */
+        /* Fondo estilo AutoCAD Grid */
         .bg-grid {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
             background-image: linear-gradient(rgba(0, 255, 136, 0.05) 1px, transparent 1px),
                               linear-gradient(90deg, rgba(0, 255, 136, 0.05) 1px, transparent 1px);
-            background-size: 30px 30px;
+            background-size: 35px 35px;
             z-index: -1;
         }
 
+        /* Barra de Menú Profesional */
+        nav {
+            background: rgba(10, 10, 10, 0.95);
+            border-bottom: 2px solid var(--primary);
+            padding: 10px 0;
+            position: fixed;
+            top: 0; width: 100%;
+            z-index: 2000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        nav a:hover { color: var(--primary); }
+
+        /* Botón de Descarga en el Menú */
+        .btn-download-nav {
+            background: var(--primary);
+            color: var(--dark) !important;
+            padding: 8px 15px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-download-nav:hover {
+            transform: scale(1.05);
+            background: white;
+        }
+
         header {
-            height: 100vh;
+            height: 80vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: radial-gradient(circle, rgba(44, 62, 80, 0.4) 0%, rgba(10, 10, 10, 1) 100%);
+            background: radial-gradient(circle, rgba(44, 62, 80, 0.3) 0%, rgba(10, 10, 10, 1) 100%);
         }
 
         .logo-box {
@@ -46,100 +90,97 @@
             padding: 20px 40px;
             margin-bottom: 20px;
             box-shadow: 0 0 20px var(--primary);
-            animation: pulse 2s infinite;
         }
 
-        @keyframes pulse {
-            0% { box-shadow: 0 0 10px var(--primary); }
-            50% { box-shadow: 0 0 30px var(--primary); }
-            100% { box-shadow: 0 0 10px var(--primary); }
-        }
-
-        h1 { font-size: 4rem; margin: 0; letter-spacing: 8px; text-transform: uppercase; }
+        h1 { font-size: 3.5rem; margin: 0; letter-spacing: 6px; }
         h1 span { color: var(--primary); }
 
-        .tagline { font-size: 1.2rem; color: #888; text-transform: uppercase; letter-spacing: 3px; }
-
-        .container { max-width: 1100px; margin: auto; padding: 50px 20px; }
+        .container { max-width: 1100px; margin: auto; padding: 60px 20px; }
 
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
 
         .card {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.03);
             padding: 30px;
-            border-radius: 15px;
-            border-left: 4px solid var(--primary);
+            border-radius: 10px;
+            border: 1px solid rgba(0, 255, 136, 0.1);
             transition: 0.4s;
         }
 
         .card:hover {
-            background: rgba(255, 255, 255, 0.1);
-            transform: scale(1.05);
+            border-color: var(--primary);
+            background: rgba(0, 255, 136, 0.05);
         }
 
         .card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
 
         .btn-cta {
-            background: var(--primary);
-            color: var(--dark);
+            background: #25D366;
+            color: white;
             padding: 15px 40px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 50px;
             display: inline-block;
-            margin-top: 30px;
             transition: 0.3s;
         }
 
-        .btn-cta:hover { transform: translateY(-5px); box-shadow: 0 5px 15px var(--primary); }
-
-        footer { text-align: center; padding: 50px; color: #555; border-top: 1px solid #222; }
+        footer { text-align: center; padding: 50px; color: #444; border-top: 1px solid #1a1a1a; margin-top: 50px; }
     </style>
 </head>
 <body>
 
     <div class="bg-grid"></div>
 
-    <header>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+        <a href="catalogo.pdf" download class="btn-download-nav">
+            <i class="fas fa-file-pdf"></i> CATÁLOGO 2026
+        </a>
+    </nav>
+
+    <header id="inicio">
         <div class="logo-box">
-            <h1>ECO<span>STEEL</span></h1>
+            <h1>ECO<span>STEEL</span> VEN</h1>
         </div>
-        <p class="tagline">Construcción Inteligente • Viviendas 2026 • Venezuela</p>
-        <a href="#proyectos" class="btn-cta">EXPLORAR TECNOLOGÍA</a>
+        <p style="letter-spacing: 3px; color: #888;">DISEÑO EN AUTOCAD • VIVIENDAS INTELIGENTES</p>
     </header>
 
-    <div class="container" id="proyectos">
+    <div class="container" id="servicios">
         <div class="grid">
             <div class="card">
+                <i class="fas fa-drafting-compass"></i>
+                <h3>Departamento de Diseño</h3>
+                <p>Proyectos detallados en <b>AutoCAD</b>. Planos estructurales para viviendas y edificios inteligentes.</p>
+            </div>
+            <div class="card">
                 <i class="fas fa-microchip"></i>
-                <h3>Edificios Inteligentes</h3>
-                <p>Integración de domótica avanzada y sistemas de biotecnología para el control ambiental.</p>
+                <h3>Construcción 2026</h3>
+                <p>Estructuras metálicas de rápida ejecución con tecnología sismorresistente avanzada.</p>
             </div>
             <div class="card">
-                <i class="fas fa-hard-hat"></i>
-                <h3>Acero Venancio</h3>
-                <p>Estructuras sismorresistentes con aleaciones de alta durabilidad y montaje rápido.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-leaf"></i>
-                <h3>Energía Eco-Sostenible</h3>
-                <p>Viviendas diseñadas para el ahorro energético total, adaptadas al clima de San Cristóbal y el mundo.</p>
+                <i class="fas fa-tools"></i>
+                <h3>Mantenimiento Industrial</h3>
+                <p>Servicios especializados de ingeniería para la industria moderna en Venezuela.</p>
             </div>
         </div>
 
-        <center style="margin-top: 80px;">
-            <h2>Contacto Corporativo</h2>
+        <div id="contacto" style="text-align: center; margin-top: 100px;">
+            <h2>HABLEMOS DE SU PROYECTO</h2>
             <p>Director: José Gregorio Hernández Calderón</p>
             <p><i class="fas fa-envelope"></i> ecosteelven@gmail.com</p>
-            <a href="https://wa.me/584161177334" class="btn-cta" style="background: #25D366; color: white;">
-                <i class="fab fa-whatsapp"></i> SOLICITAR PRESUPUESTO
+            <br>
+            <a href="https://wa.me/584161177334" class="btn-cta">
+                <i class="fab fa-whatsapp"></i> CONTACTAR AHORA
             </a>
-        </center>
+        </div>
     </div>
 
     <footer>
-        <p>© 2026 Eco Steel Ven |  inteligentes</p>
-        <p>Legado Asegurado para Venancio H. en su memoria </p>
+        <p>© 2026 Eco Steel Ven | Patrimonios inteligencia </p>
+        <p>Legado para Alicia H. - San Cristóbal, Táchira</p>
     </footer>
 
 </body>
